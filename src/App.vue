@@ -5,14 +5,16 @@ import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
 </script>
 
 <template>
-  <header>
-    <BHeader />
-  </header>
+  <div class="main-container">
+    <header>
+      <BHeader />
+    </header>
 
-  <main>
-    <LibraryRegistrationForm />
+  <main class="main-box">
+    <router-view></router-view>
     <!-- <JSONLab /> -->
   </main>
+  </div>
 </template>
 
 <style scoped>
