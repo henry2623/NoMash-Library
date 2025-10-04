@@ -12,7 +12,7 @@ import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
 
   <main class="main-box">
     <router-view></router-view>
-    <!-- <JSONLab /> -->
+
   </main>
   </div>
 </template>
