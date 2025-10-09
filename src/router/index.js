@@ -6,10 +6,10 @@ import FirebaseSigninView from '@/views/FirebaseSigninView.vue'
 import FirebaseRegisterView from '@/views/FirebaseRegisterView.vue'
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-<<<<<<< HEAD
-=======
+
+
 import Addbook from '@/views/Addbook.vue'
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView, meta: { public: true } },
@@ -17,15 +17,15 @@ const routes = [
   { path: '/denied', name: 'AccessDenied', component: AccessDeniedView, meta: { public: true } },
   { path: '/FireLogin', name: 'FireLogin', component: FirebaseSigninView, meta: { public: true } },
   { path: '/FireRegister', name: 'FireRegister', component: FirebaseRegisterView, meta: { public: true } },
-<<<<<<< HEAD
+
 
   { path: '/:pathMatch(.*)*', redirect: '/' }
-=======
+
    { path: '/Addbook', Addbook: 'add', component: Addbook, meta: {public: true  } },
 
   { path: '/:pathMatch(.*)*', redirect: '/' },
   
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
 ]
 
 const router = createRouter({

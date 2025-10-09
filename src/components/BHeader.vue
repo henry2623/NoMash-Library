@@ -12,7 +12,7 @@
             Home (Week 5)
           </router-link>
         </li>
-<<<<<<< HEAD
+
 
        
 
@@ -20,16 +20,16 @@
         <li class="nav-item" v-if="!user">
           <router-link
             to="/FireLogin"
-=======
+
         <li class="nav-item">
           <router-link
             to="/addbook"
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
             class="nav-link"
             exact-active-class="active"
      
           >
-<<<<<<< HEAD
+
             Firebase Login
           </router-link>
         </li>
@@ -42,7 +42,7 @@
             Firebase Register
           </router-link>
         </li>
-=======
+
             addbook
           </router-link>
         </li>
@@ -68,7 +68,7 @@
             Firebase Register
           </router-link>
         </li>
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
 
   
         <li class="nav-item" v-else>
