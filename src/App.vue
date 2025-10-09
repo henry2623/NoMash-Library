@@ -2,11 +2,13 @@
 import JSONLab from './components/JSONLab.vue'
 import BHeader from './components/BHeader.vue'
 import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
+import GetBookCountView from './views/GetBookCountView.vue';
+import { computed } from 'vue';
 </script>
 
 <template>
   <div class="main-container">
-    <header>
+    <header v-if="showHeader">
       <BHeader />
     </header>
 
@@ -16,6 +18,23 @@ import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
   </main>
   </div>
 </template>
+<script>
+import BHeader from './components/BHeader.vue'
+import GetBookCountView from './views/GetBookCountView.vue';
+export default {    
+  name: 'App',
+  components: {
+    BHeader,
+    GetBookCountView
+    
+  },
+  computed: {
+    showHeader() {
+      return this.$route.name != GetBookCountView;
+    }
+  }
+};
+</script>
 
 <style scoped>
 /* header {

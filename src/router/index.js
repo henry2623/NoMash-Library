@@ -2,14 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import AccessDeniedView from '../views/AccessDeniedView.vue'
-import FirebaseSigninView from '@/views/FirebaseSigninView.vue'
-import FirebaseRegisterView from '@/views/FirebaseRegisterView.vue'
-
+import FirebaseSigninView from '../views/FirebaseSigninView.vue'
+import FirebaseRegisterView from '../views/FirebaseRegisterView.vue'
+import getbook from '../views/GetBookCountView.vue'
+import GetAllBookAPI from '../views/GetAllBookAPI.vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-<<<<<<< HEAD
-=======
-import Addbook from '@/views/Addbook.vue'
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
+
+import Addbook from '../views/Addbook.vue'
+import WeatherView from '../views/WeatherView.vue'
+
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView, meta: { public: true } },
@@ -17,15 +19,22 @@ const routes = [
   { path: '/denied', name: 'AccessDenied', component: AccessDeniedView, meta: { public: true } },
   { path: '/FireLogin', name: 'FireLogin', component: FirebaseSigninView, meta: { public: true } },
   { path: '/FireRegister', name: 'FireRegister', component: FirebaseRegisterView, meta: { public: true } },
-<<<<<<< HEAD
+  { path: '/getbook', name: 'getbook', component: getbook, meta: { public: true } },
 
-  { path: '/:pathMatch(.*)*', redirect: '/' }
-=======
+{
+  path: "/GetAllBookAPI",
+  name: "GetAllBookAPI",
+  component: GetAllBookAPI
+}
+,
+  { path: '/:pathMatch(.*)*', redirect: '/' },
+
    { path: '/Addbook', Addbook: 'add', component: Addbook, meta: {public: true  } },
 
+  { path: '/WeartherCheck', name:"WeartherCheck",component: WeatherView },
   { path: '/:pathMatch(.*)*', redirect: '/' },
   
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
+
 ]
 
 const router = createRouter({

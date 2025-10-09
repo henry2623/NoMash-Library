@@ -11,45 +11,48 @@
           >
             Home (Week 5)
           </router-link>
-        </li>
-<<<<<<< HEAD
-
-       
-
-
-        <li class="nav-item" v-if="!user">
+        </li> 
+        <li class="nav-item">
           <router-link
-            to="/FireLogin"
-=======
+            to="/WeartherCheck"
+            class="nav-link"
+            exact-active-class="active"
+            aria-current="page"
+          >
+           weathercheck
+          </router-link>
+        </li> 
+        <li class="nav-item">
+          <router-link
+            to="/getbook"
+            class="nav-link"
+            exact-active-class="active"
+            aria-current="page"
+          >
+           getbook
+          </router-link>
+        </li>
+
         <li class="nav-item">
           <router-link
             to="/addbook"
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
             class="nav-link"
             exact-active-class="active"
-     
           >
-<<<<<<< HEAD
-            Firebase Login
-          </router-link>
-        </li>
-        <li class="nav-item" v-if="!user">
-          <router-link
-            to="/FireRegister"
-            class="nav-link"
-            active-class="active"
-          >
-            Firebase Register
-          </router-link>
-        </li>
-=======
             addbook
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link
+            to="/getAllBookAPI"
+            class="nav-link"
+            exact-active-class="active"
+          >
+            getAllBookAPI
+          </router-link>
+        </li>
 
-       
-
-
+        <!-- Show when NOT logged in -->
         <li class="nav-item" v-if="!user">
           <router-link
             to="/FireLogin"
@@ -68,9 +71,8 @@
             Firebase Register
           </router-link>
         </li>
->>>>>>> e2d0f83c41cf19e05cb2de4ba0aa89148d28c1d2
 
-  
+        <!-- Show when logged in -->
         <li class="nav-item" v-else>
           <button class="nav-link btn btn-link p-0" @click="logout">
             Logout ({{ user.displayName || user.email }})
@@ -88,7 +90,6 @@ import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
 const user = ref(null)
 const auth = getAuth()
 
-
 onMounted(() => {
   onAuthStateChanged(auth, (firebaseUser) => {
     user.value = firebaseUser
@@ -98,9 +99,8 @@ onMounted(() => {
 const logout = async () => {
   try {
     await signOut(auth)
-    console.log('Current User after logout:', auth.currentUser);
+    console.log('Current User after logout:', auth.currentUser)
     user.value = null
-    
   } catch (error) {
     console.error('Logout error:', error)
   }
