@@ -9,8 +9,12 @@ import GetAllBookAPI from '../views/GetAllBookAPI.vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 
+<<<<<<< HEAD
 import Addbook from '../views/Addbook.vue'
 import WeatherView from '../views/WeatherView.vue'
+=======
+import Addbook from '@/views/Addbook.vue'
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
 
 
 const routes = [
@@ -19,6 +23,7 @@ const routes = [
   { path: '/denied', name: 'AccessDenied', component: AccessDeniedView, meta: { public: true } },
   { path: '/FireLogin', name: 'FireLogin', component: FirebaseSigninView, meta: { public: true } },
   { path: '/FireRegister', name: 'FireRegister', component: FirebaseRegisterView, meta: { public: true } },
+<<<<<<< HEAD
   { path: '/getbook', name: 'getbook', component: getbook, meta: { public: true } },
 
 {
@@ -29,6 +34,12 @@ const routes = [
 ,
   { path: '/:pathMatch(.*)*', redirect: '/' },
 
+=======
+
+
+  { path: '/:pathMatch(.*)*', redirect: '/' }
+
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
    { path: '/Addbook', Addbook: 'add', component: Addbook, meta: {public: true  } },
 
   { path: '/WeartherCheck', name:"WeartherCheck",component: WeatherView },

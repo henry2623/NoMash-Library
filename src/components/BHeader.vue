@@ -11,6 +11,7 @@
           >
             Home (Week 5)
           </router-link>
+<<<<<<< HEAD
         </li> 
         <li class="nav-item">
           <router-link
@@ -32,13 +33,45 @@
            getbook
           </router-link>
         </li>
+=======
+        </li>
+
+
+       
+
+
+        <li class="nav-item" v-if="!user">
+          <router-link
+            to="/FireLogin"
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
 
         <li class="nav-item">
           <router-link
             to="/addbook"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
             class="nav-link"
             exact-active-class="active"
           >
+<<<<<<< HEAD
+=======
+
+            Firebase Login
+          </router-link>
+        </li>
+        <li class="nav-item" v-if="!user">
+          <router-link
+            to="/FireRegister"
+            class="nav-link"
+            active-class="active"
+          >
+            Firebase Register
+          </router-link>
+        </li>
+
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
             addbook
           </router-link>
         </li>
@@ -71,6 +104,10 @@
             Firebase Register
           </router-link>
         </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76fc716f177b20f40a9d07406700be8255d1fb71
 
         <!-- Show when logged in -->
         <li class="nav-item" v-else>
